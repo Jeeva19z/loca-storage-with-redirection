@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        document.addEventListener('DOMContentLoaded',function(){
+    
+       
+    
+    //         if (typeof(Storage) !== "undefined") {
+    
+    
+     
+    
+    // var storedValue = localStorage.getItem("newValueSet");
+    
+    // if (storedValue !== null) {
+    
+    
+     
+    
+    // console.log("Value retrieved from local storage eeeeeeeeeeee", storedValue);
+    
+    // } else {
+    
+    
+     
+    
+    // console.log("Value not found in local storage");
+    
+    // }
+    
+    // } else {
+    
+    // console.log("Local storage is not supported by this browser");
+    
+    // }
+    
+    
+     
+    
+    var storedValue = localStorage.getItem("newValueSet");
+    
+    
+     
+    
+    const currentURL= window.location.href;
+    
+    
+     
+    
+    const findQuesmark=currentURL.indexOf('?');
+    
+    
+     
+    
+    if(findQuesmark !== -1){
+    
+        const subStringvalue = currentURL.substring(findQuesmark+1)
+    
+        console.log(subStringvalue);
+    
+    
+     
+    
+       
+    
+    console.log("sub value")
+    
+        }
+    
+        else{
+    
+            console.log(currentURL)
+    
+    
+     
+    
+    const addtionString = `?${storedValue}`;
+    
+    
+     
+    
+    const modifiedURL = currentURL + addtionString;
+    
+    
+     
+    
+    console.log("mdf :",modifiedURL);
+    
+    
+     
+    
+        }
+    
+    
+     
+    
+        });
+    
+    </script>
+    
+     
+    
+    <p> Local storeger set value</p>
+    
+     
+    
+     
+    
+    <script>
+    
+    document.addEventListener('DOMContentLoaded',function(){
+    
+    var currentURL = window.location.href;
+    
+    console.log(currentURL)
+    
+    var questionMarkIndex = currentURL.indexOf('?');
+    
+    if (questionMarkIndex !== -1) {
+    
+    var afterQuestionMark = currentURL.substring(questionMarkIndex + 1);
+    
+    console.log("After the question mark:", afterQuestionMark);
+    
+    localStorage.setItem("newValueSet",afterQuestionMark)
+    
+    } else {
+    
+    console.log("Current URL:", currentURL);
+    
+    console.log("esle exccute")
+    
+    }
+    
+    });
+    
+    </script>
+</body>
+</html>
