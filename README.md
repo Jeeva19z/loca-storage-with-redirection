@@ -1,0 +1,1 @@
+# loca-storage-with-redirection
